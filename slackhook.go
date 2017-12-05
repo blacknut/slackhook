@@ -27,6 +27,7 @@ type Message struct {
 type Attachment struct {
 	Fallback   string  `json:"fallback,omitempty"` // plain text summary
 	Color      string  `json:"color,omitempty"`    // {good|warning|danger|hex}
+	Pretext    string  `json:"pretext,omitempty"`
 	AuthorName string  `json:"author_name,omitempty"`
 	AuthorLink string  `json:"author_link,omitempty"`
 	AuthorIcon string  `json:"author_icon,omitempty"`
@@ -36,8 +37,8 @@ type Attachment struct {
 	Fields     []Field `json:"fields,omitempty"`
 	ImageURL   string  `json:"image_url,omitempty"`
 	ThumbURL   string  `json:"thumb_url,omitempty"`
-	FooterIcon string  `json:"footer,omitempty"`
-	Footer     string  `json:"footer_icon,omitempty"`
+	FooterIcon string  `json:"footer_icon,omitempty"`
+	Footer     string  `json:"footer,omitempty"`
 	Timestamp  int     `json:"ts,omitempty"` // Unix timestamp
 }
 
